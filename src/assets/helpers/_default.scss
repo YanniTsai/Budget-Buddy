@@ -1,0 +1,15 @@
+body{
+    background-color: $main-blue;
+}
+
+.h-100vh{
+    height: 100vh;
+}
+
+.blue-btn{
+    background-color: $main-blue;
+
+    &:hover{
+        background-color: #83ceec;
+    }
+}
