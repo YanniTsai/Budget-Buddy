@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbudget_buddy"]=self["webpackChunkbudget_buddy"]||[]).push([[314],{3314:function(u,n,e){function t(u,n){return" account "}e.r(n),e.d(n,{default:function(){return a}});var r=e(89);const c={},d=(0,r.Z)(c,[["render",t]]);var a=d}}]);
+//# sourceMappingURL=314.46f0f6a5.js.map
