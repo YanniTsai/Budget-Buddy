@@ -1,0 +1,61 @@
+.card{
+    height: 300px;
+    width: 215px;
+    overflow: hidden;
+
+    .card-img{
+        height: 215px;
+        width: 215px;
+        position: relative;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+
+        .title{
+            height: 35px;
+            width: 100%;
+            background-color: $main-yellow;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .edit-delete{
+            height: 180px;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+
+            button{
+                border: none;
+                display: none;
+            }
+        }
+    }
+
+    &:hover{
+        .edit-delete{
+            background-color: rgba(0, 0, 0, 0.5);
+
+            button{
+                display: block;
+            }
+        }
+    }
+    
+}
+
+.add-ledger-btn{
+    height: 70px;
+    width: 70px;
+    font-size: 32px;
+    background-color: $main-yellow;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
