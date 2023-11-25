@@ -1,0 +1,40 @@
+.navbar{
+    height: 100px;
+    color: #FFFFFF;
+    background-color: $dark-blue;
+
+    .navbar-brand{
+        color: #FFFFFF;
+        width: 100px;
+
+        i{
+            font-size: 68px;
+        }
+    }
+
+    .navbar-collapse{
+        font-size: 26px;
+    }
+}
+
+.sidebar{
+    color: $dark-blue;
+    height: calc(100vh - 100px);
+    width: 100px;
+    background-color: $light-blue;
+
+    a{
+        color: $dark-blue;
+        text-decoration: none;
+
+        i{
+            font-size: 40px;
+        }
+    }
+}
+
+.ledger-modal{
+    .modal-header{
+        background-color: $main-blue;
+    }
+}
