@@ -1,9 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid p-0">
-            <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
+            <router-link to="/dashboard/ledger" class="navbar-brand d-flex justify-content-center align-items-center">
                 <i class="bi bi-people-fill"></i>
-            </a>
+            </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
