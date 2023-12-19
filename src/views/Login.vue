@@ -38,6 +38,9 @@
 </template>
 
 <script>
+import emitter from '@/methods/emitter'
+import Toast from '../components/Toast.vue'
+
 export default {
   data () {
     return {
@@ -47,6 +50,14 @@ export default {
       },
       showPassword: false,
       isLoading: false
+    }
+  },
+  components: {
+    Toast
+  },
+  provide () {
+    return {
+      emitter
     }
   },
   methods: {
@@ -73,6 +84,8 @@ export default {
         this.isLoading = false
 
         console.log(error)
+
+        emitter.emit('notification', { success: false, title: '登入失敗：', content: '帳號或密碼錯誤' })
       })
     }
   }
