@@ -3,8 +3,8 @@
   <div class="d-flex">
     <Sidebar></Sidebar>
     <router-view></router-view>
-    <Toast></Toast>
   </div>
+  <Toast></Toast>
 </template>
 
 <script>
@@ -23,6 +23,18 @@ export default {
     return {
       emitter
     }
+  },
+  created () {
+    // 將存在 cookie 中的 token 取出
+    /* eslint-disable */
+    const token = document.cookie.replace(
+      /(?:(?:^|.*;\s*)token\s*\=\s*([^;]*).*$)|^.*$/,
+      '$1'
+    )
+    /* eslint-enable */
+
+    // 將 token 存於 header
+    this.$http.defaults.headers.common.Authorization = token
   }
 }
 </script>
