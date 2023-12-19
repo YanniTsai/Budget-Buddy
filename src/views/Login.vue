@@ -28,9 +28,7 @@
             <!-- button -->
             <div class="w-100 d-flex justify-content-between align-items-center">
                 <router-link to="/create_account" class="router-link-style">建立帳戶</router-link>
-                <button class="btn blue-btn" @click="login">登入
-                  <!-- <router-link to="/dashboard/ledger" class="login-btn">登入</router-link> -->
-                </button>
+                <button class="btn blue-btn" @click="login">登入</button>
             </div>
         </div>
     </div>
