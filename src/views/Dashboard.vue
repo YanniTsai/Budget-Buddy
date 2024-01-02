@@ -34,7 +34,7 @@ export default {
     /* eslint-enable */
 
     // 將 token 存於 header
-    this.$http.defaults.headers.common.Authorization = token
+    this.$http.defaults.headers.common.Authorization = 'Bearer ' + token
   }
 }
 </script>
