@@ -1,7 +1,7 @@
 <template>
     <Loading :active="isLoading" style="z-index: 9999"></Loading>
     <div class="container-fluid d-flex justify-content-center">
-        <div class="mt-5 col-6">
+        <div class="mt-5 col-4">
             <div class="d-flex justify-content-center">
                 <img src="https://picsum.photos/200" alt="大頭照" class="mb-3 account-img">
             </div>
