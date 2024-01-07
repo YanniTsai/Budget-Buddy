@@ -12,10 +12,33 @@ body{
     height: 100vh;
 }
 
+// main-blue
 .blue-btn{
     background-color: $main-blue;
 
     &:hover{
         background-color: #83ceec;
+    }
+}
+
+// text-blue
+.textblue-btn{
+    color: #ffffff;
+    background-color: $text-blue;
+
+    &:hover{
+        background-color: #68a3ea;
+    }
+}
+
+.gray-btn{
+    background-color: $light-gray;
+
+    &:hover{
+        background-color: #c8c8c8;
+    }
+
+    &:active{
+        background-color: #c8c8c8;
     }
 }
