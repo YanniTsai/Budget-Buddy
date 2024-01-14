@@ -34,6 +34,10 @@ const routes = [
       {
         path: 'ledger',
         component: () => import('../views/Ledger.vue')
+      },
+      {
+        path: 'ledger/:ledgerId',
+        component: () => import('../views/LedgerInfo.vue')
       }
     ]
   }

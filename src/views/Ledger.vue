@@ -3,10 +3,17 @@
   <div class="p-5 row justify-content-center justify-content-md-start">
     <div class="card col-12 col-md-3 me-3 mb-3 p-0" v-for="(item, index) in ledgers" :key="'ledger'+index">
       <div class="card-img">
-        <img :src="item.image" alt="帳簿封面" />
-        <div class="title d-flex justify-content-center align-items-center">
-            <h5 class="card-title m-0">{{ item.name }}</h5>
-        </div>
+        <router-link :to="'/dashboard/ledger/' + item._id">
+          <img :src="item.image" alt="帳簿封面" />
+          <div class="title d-flex justify-content-center align-items-center">
+              <h5 class="card-title m-0">{{ item.name }}</h5>
+          </div>
+          <div class="card-body overflow-scroll">
+            <p class="card-text">
+              {{ item.description }}
+            </p>
+          </div>
+        </router-link>
         <!-- 編輯/刪除 -->
         <div class="edit-delete d-flex justify-content-end align-items-start">
             <button class="btn text-white" @click="openModal(false, item)">
@@ -16,11 +23,6 @@
                 <i class="bi bi-trash"></i>
             </button>
         </div>
-      </div>
-      <div class="card-body overflow-scroll">
-        <p class="card-text">
-          {{ item.description }}
-        </p>
       </div>
     </div>
     <button class="add-ledger-btn" @click="openModal(true)"><i class="bi bi-plus"></i></button>
