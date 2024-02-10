@@ -48,3 +48,12 @@ a{
         background-color: #c8c8c8;
     }
 }
+
+.transparent-btn{
+    background-color: transparent;
+    border: transparent;
+    
+    :focus{
+        border: transparent;
+    }
+}

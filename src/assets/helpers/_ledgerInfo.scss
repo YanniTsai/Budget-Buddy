@@ -1,0 +1,88 @@
+.calendar{
+    height: 80vh;
+}
+
+.calendar-header{
+    height: 40px;
+    font-size: 24px;
+    background-color: $main-yellow;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.search-btn{
+    position: absolute;
+    right: 10px;
+}
+
+th{
+    text-align: center;
+    width: calc(100%/7);
+}
+
+td{
+    height: calc((80vh - 70px)/6);
+}
+
+.offcanvas-header{
+    background-color: $main-yellow;
+    position: relative;
+
+    .recordOption{
+        background-color: #ffffff;
+        border: 1px solid $light-gray;
+        border-radius: 10px;
+        position: absolute;
+        top: 50px;
+        right: 45px;
+
+        .addRecord-btn{
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            :hover{
+                background-color: $light-gray;
+            }
+        }
+
+        .btn-border{
+            border-bottom: 1px solid $light-gray;
+        }
+    }
+}
+
+.record-detail{
+    border-bottom: 1px solid $light-gray;
+
+    .category-icon{
+        font-size: 24px;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    .description{
+        color: $main-gray;
+    }
+
+    .income{
+        color: #12B818;
+    }
+
+    .payment{
+        font-size: 12px;
+        color: $main-gray;
+    }
+
+    .transfer{
+        color: $text-blue;
+    }
+
+    .edit-btn{
+        color: $main-gray;
+    }
+}
