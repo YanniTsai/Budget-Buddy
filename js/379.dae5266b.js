@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkbudget_buddy"]=self["webpackChunkbudget_buddy"]||[]).push([[379],{379:function(e,u,n){function r(e,u){return" ledgerinfo "}n.r(u),n.d(u,{default:function(){return f}});var t=n(89);const d={},c=(0,t.Z)(d,[["render",r]]);var f=c}}]);
-//# sourceMappingURL=379.dae5266b.js.map
