@@ -38,6 +38,10 @@ const routes = [
       {
         path: 'ledger/:ledgerId',
         component: () => import('../views/LedgerInfo.vue')
+      },
+      {
+        path: 'ledger/:ledgerId/fund',
+        component: () => import('../views/Funds.vue')
       }
     ]
   }
