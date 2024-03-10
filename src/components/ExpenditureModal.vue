@@ -7,14 +7,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="col-md-6 mb-3 d-flex justify-content-center">
-                        <span>2024 年 02 月 10 日 星期六</span>
+                    <div class="col-md-3 mb-3">
+                        <input type="date" class="form-control">
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="currency" class="form-label">支出類別</label>
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example" v-model="tempRecord.categories">
                                     <option selected>類別</option>
                                 </select>
                             </div>
@@ -26,20 +26,20 @@
                             </div>
                             <div class="mb-3">
                                 <label for="amount" class="form-label">金額</label>
-                                <input type="text" class="form-control" id="amount" v-model="tempLedger.name">
+                                <input type="text" class="form-control" id="amount" v-model="tempRecord.amount">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div>
                                 <label for="describe" class="form-label">備註</label>
-                                <textarea class="form-control" id="describe" rows="8" v-model="tempLedger.description"></textarea>
+                                <textarea class="form-control" id="describe" rows="8" v-model="tempRecord.description"></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn gray-btn" data-bs-dismiss="modal">取消</button>
-                    <button type="button" class="btn blue-btn" @click="$emit('update-ledger', tempLedger)">新增</button>
+                    <button type="button" class="btn blue-btn" @click="$emit('update-record', tempRecord)">新增</button>
                 </div>
             </div>
         </div>
@@ -51,17 +51,17 @@ import Modal from 'bootstrap/js/dist/modal'
 
 export default {
   props: {
-    ledger: {}
+    record: {}
   },
   data () {
     return {
       modal: {},
-      tempLedger: {}
+      tempRecord: {}
     }
   },
   watch: {
-    ledger () {
-      this.tempLedger = this.ledger
+    record () {
+      this.tempRecord = this.record
     }
   },
   methods: {

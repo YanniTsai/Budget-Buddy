@@ -7,8 +7,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="col-md-6 mb-3 d-flex justify-content-center">
-                        <span>2024 年 02 月 10 日 星期六</span>
+                    <div class="col-md-3 mb-3">
+                        <input type="date" class="form-control">
                     </div>
                     <div class="row">
                         <div class="col-md-6">
