@@ -40,9 +40,9 @@
                     <h5 class="offcanvas-title" id="offcanvasRightLabel">2024 年 02 月 10 日 星期六</h5>
                     <button class="btn transparent-btn" @click.prevent="showRecordOption = !showRecordOption"><i class="bi bi-plus-circle"></i></button>
                     <div class="recordOption d-flex flex-column" v-if="showRecordOption">
-                        <a href="" @click.prevent="openExpenditureModal"><div class="addRecord-btn btn-border">新增支出</div></a>
-                        <a href="" @click.prevent="openIncomeModal"><div class="addRecord-btn btn-border">新增收入</div></a>
-                        <a href="" @click.prevent="openTransferModal"><div class="addRecord-btn">新增轉帳</div></a>
+                        <a href="" @click.prevent="openExpenditureModal(true)"><div class="addRecord-btn btn-border">新增支出</div></a>
+                        <a href="" @click.prevent="openIncomeModal(true)"><div class="addRecord-btn btn-border">新增收入</div></a>
+                        <a href="" @click.prevent="openTransferModal(true)"><div class="addRecord-btn">新增轉帳</div></a>
                     </div>
                 </div>
                 <div class="offcanvas-body">
@@ -151,6 +151,7 @@ export default {
     return {
     //   day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
       tableData: Array.from({ length: 6 }, () => Array(7).fill('')),
+      tempRecord: {},
       showRecordOption: false
     }
   },
@@ -161,13 +162,37 @@ export default {
     DeleteModal
   },
   methods: {
-    openExpenditureModal () {
+    openExpenditureModal (isNew, item) {
+      if (isNew) {
+        this.tempRecord = {
+          type: 'expenditure'
+        }
+      } else {
+        this.tempRecord = { ...item }
+      }
+
       this.$refs.expenditureModal.showModal()
     },
-    openIncomeModal () {
+    openIncomeModal (isNew, item) {
+      if (isNew) {
+        this.tempRecord = {
+          type: 'income'
+        }
+      } else {
+        this.tempRecord = { ...item }
+      }
+
       this.$refs.incomeModal.showModal()
     },
-    openTransferModal () {
+    openTransferModal (isNew, item) {
+      if (isNew) {
+        this.tempRecord = {
+          type: 'transfer'
+        }
+      } else {
+        this.tempRecord = { ...item }
+      }
+
       this.$refs.transferModal.showModal()
     },
     openDeleteModal () {
@@ -177,6 +202,7 @@ export default {
   },
   mounted () {
     this.offcanvas = new Offcanvas(this.$refs.offcanvas)
+    console.log(this.$route)
   }
 }
 </script>
